@@ -1,0 +1,3 @@
+[submodule "discord-crypto-task-payroll-bot"]
+	path = discord-crypto-task-payroll-bot
+	url = https://github.com/illmedicine/discord-crypto-task-payroll-bot.git
