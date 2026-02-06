@@ -20,7 +20,7 @@ jobs:
           node-version: 18
 
       - name: Install and build web
-        working-directory: ./web
+        working-directory: ./discord-crypto-task-payroll-bot/web
         run: |
           npm ci
           npm run build
@@ -28,7 +28,7 @@ jobs:
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: ./web/dist
+          path: ./discord-crypto-task-payroll-bot/web/dist
 
   deploy:
     needs: build
