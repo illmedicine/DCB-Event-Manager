@@ -19,17 +19,17 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd web
+          cd discord-crypto-task-payroll-bot/web
           npm install
 
       - name: Build
         run: |
-          cd web
+          cd discord-crypto-task-payroll-bot/web
           npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: web/dist
+          publish_dir: discord-crypto-task-payroll-bot/web/dist
           publish_branch: gh-pages
