@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  bot:
+    build: ./discord-crypto-task-payroll-bot
+    environment:
+      - DISCORD_TOKEN
+      - DISCORD_CLIENT_ID
+      - SOLANA_PRIVATE_KEY
+      - SOLANA_RPC_URL
+      - DB_PATH=/data/payroll.db
+    volumes:
+      - ./discord-crypto-task-payroll-bot:/app
+      - ./data:/data
+    ports:
+      - '3000:3000'
+    restart: unless-stopped
