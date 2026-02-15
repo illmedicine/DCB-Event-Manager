@@ -35,7 +35,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: https://illmedicine.github.io/discord-crypto-task-payroll-bot/
+      url: https://illmedicine.github.io/DCB-Event-Manager/
     steps:
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
