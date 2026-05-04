@@ -28,4 +28,6 @@ COPY --from=builder /src/bot/web/dist /app/dist
 ENV NODE_ENV=production
 ENV PORT=8080
 EXPOSE 8080
-CMD ["sh", "-c", "serve -s dist -l ${PORT:-8080}"]
+# Bind to 0.0.0.0 explicitly so Railway's healthcheck (and external traffic) can reach the container.
+# serve's default is to listen on 0.0.0.0 but use tcp:// form to be unambiguous.
+CMD ["sh", "-c", "serve -s dist -l tcp://0.0.0.0:${PORT:-8080}"]
